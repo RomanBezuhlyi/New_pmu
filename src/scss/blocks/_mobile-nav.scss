@@ -1,0 +1,89 @@
+.header-mob-wrap {
+  display: none;
+  @media (max-width: 991px) {
+    display: block;
+    padding: 11px 0 16px 0;
+  }
+}
+
+.header-mob {
+  @include flex(row, space-between, center);
+  gap: 20px;
+  &__num {
+    display: block;
+    font-size: 16px;
+    line-height: 28px;
+    border-bottom: 2px solid $accent;
+  }
+  &__right {
+    @include flex(row, flex-start, center);
+    gap: 18px;
+    &-burger {
+      @include flex(row, center, center);
+    }
+  }
+}
+
+.menu {
+  position: absolute;
+  top: -150%;
+  left: 0;
+  z-index: 100;
+  padding-top: 11px;
+  width: 100%;
+  height: 100vh;
+  background-color: $accentBg;
+  @include transition;
+  &__top {
+    @include flex(row, space-between, center);
+    margin-bottom: 22px;
+  }
+
+  &__num {
+    text-align: center;
+    margin-bottom: 25px;
+    &-link {
+      color: $bg;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    &-line {
+      display: block;
+      width: 150px;
+      height: 3px;
+      background-color: $accent;
+      margin: auto;
+      margin-top: 4px;
+    }
+  }
+
+  &__list {
+    @include flex(column, center, center);
+    gap: 6px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    &-item {
+      width: 100%;
+      text-align: center;
+      color: $bg;
+      @include transition;
+      &:hover {
+        color: $accent;
+      }
+    }
+    &-item a {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__social {
+    position: absolute;
+    bottom: 44px;
+    left: 50%;
+    transform: translate(-50%);
+    @include flex(row, center, center);
+    gap: 24px;
+  }
+}

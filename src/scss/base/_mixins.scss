@@ -1,0 +1,68 @@
+/* Міксін для стилів флексбокса */
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+/* Міксін для :hover */
+@mixin transition {
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+@mixin button {
+  position: relative;
+  z-index: 2;
+  @include flex(row, center, center);
+  color: $bg;
+  padding: 10px 20px 9px 20px;
+  text-align: center;
+  font-family: $font-title;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  border-radius: 20px;
+  background: $accent;
+  border: 1px solid $accent;
+  @include transition;
+  &:hover {
+    color: $accent;
+    background-color: $bg;
+  }
+  @media (max-width: 991px) {
+    font-size: 18px;
+    padding: 10px 12px 9px 12px;
+    letter-spacing: 0.18px;
+  }
+}
+
+@mixin title {
+  font-family: $font-title;
+  font-size: 40px;
+  line-height: 46px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  @media (max-width: 991px) {
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.8px;
+  }
+}
+
+@mixin text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 1.08px;
+  text-transform: uppercase;
+  @media (max-width: 991px) {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.72px;
+  }
+}

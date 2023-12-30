@@ -1,0 +1,108 @@
+.press-media-wrap {
+  padding: 50px 0;
+  @media (max-width: 991px) {
+    padding: 25px 0;
+  }
+}
+
+.press-media {
+  position: relative;
+  @include flex(column, center, center);
+  &__bg {
+    position: absolute;
+    left: 0;
+    bottom: -55px;
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+  &__carousel {
+    position: relative;
+    z-index: 2;
+    @include flex(row, center, flex-end);
+    gap: 16px;
+    padding: 0 225px;
+    @media (max-width: 991px) {
+      padding: 0;
+    }
+  }
+  &__swiper {
+    width: 100%;
+    &-wrap {
+      display: flex;
+      align-items: flex-end;
+    }
+    &-slide {
+      width: calc(100% / 3);
+    }
+  }
+  &__laptop {
+    position: relative;
+    z-index: 2;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    @media (max-width: 991px) {
+      margin-top: 18px;
+      margin-bottom: 23px;
+    }
+    &-video {
+      position: absolute;
+      left: 50%;
+      top: 45%;
+      border-radius: 10px;
+      transform: translate(-50%, -50%);
+      max-width: 891.122px;
+      max-height: auto;
+      @media (max-width: 1050px) {
+        max-width: 791.122px;
+      }
+      @media (max-width: 1050px) {
+        max-width: 691.122px;
+      }
+      @media (max-width: 835px) {
+        max-width: 600px;
+      }
+      @media (max-width: 715px) {
+        max-width: 500px;
+      }
+      @media (max-width: 600px) {
+        max-width: 400px;
+      }
+      @media (max-width: 480px) {
+        max-width: 300px;
+      }
+    }
+  }
+  &__descr {
+    position: relative;
+    font-family: $font-permanent;
+    font-size: 48px;
+    text-transform: lowercase;
+    text-align: right;
+    margin-left: auto;
+    margin-right: 200px;
+    @media (max-width: 991px) {
+      font-size: 18px;
+      margin: 0 auto;
+    }
+    img {
+      position: absolute;
+      right: -100px;
+      bottom: 0;
+      @media (max-width: 991px) {
+        right: -35px;
+        width: 33.957px;
+        height: 30.744px;
+        transform: rotate(63deg);
+      }
+    }
+  }
+}
+.press-media-prev-arr,
+.press-media-next-arr {
+  @include flex(row, center, center);
+  margin-bottom: 10px;
+  @media (max-width: 991px) {
+    margin-bottom: 0;
+  }
+}

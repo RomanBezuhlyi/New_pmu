@@ -1,0 +1,61 @@
+.hero-general-wrapper {
+  position: relative;
+  background: url(../img/hero.png),
+    $accentBg 0px -260.75px / 100% 192.059% no-repeat;
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.hero-general {
+  position: relative;
+  @include flex(column, center, center);
+  padding: 142px 0 115px 0;
+  @media (max-width: 991px) {
+    padding: 51px 0 48px 0;
+  }
+  &__wrap {
+    @include flex(row, center, center);
+  }
+  &__title {
+    color: #fffcfc;
+    font-family: $font-title;
+    font-size: 72px;
+    line-height: 66px;
+    letter-spacing: 2.88px;
+    text-transform: uppercase;
+    @media (max-width: 991px) {
+      font-size: 24px;
+      line-height: 36px;
+      letter-spacing: 0.96px;
+    }
+  }
+  &__img {
+    margin-left: -22px;
+    @media (max-width: 991px) {
+      margin-left: -10px;
+      width: 155px;
+      height: 95px;
+    }
+  }
+  &__list {
+    position: absolute;
+    right: 34px;
+    bottom: 42px;
+    @include flex(row, center, center);
+    gap: 24px;
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+  &__permanent {
+    margin-top: 18px;
+    font-family: $font-permanent;
+    font-size: 48px;
+    font-weight: 400;
+    text-transform: lowercase;
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+}

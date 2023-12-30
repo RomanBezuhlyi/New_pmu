@@ -1,0 +1,42 @@
+/* Базові стилі */
+
+/* Загальні налаштування */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  height: 100vh;
+}
+
+body {
+  background: $bg;
+  color: $text;
+  font-family: $font-main;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.18px;
+}
+
+input {
+  &::placeholder {
+    font-family: $font-main;
+  }
+}
+
+.swiper-pagination-bullet {
+  background-color: $text !important;
+  opacity: 1 !important;
+  width: 5px !important;
+  height: 5px !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: $accent !important;
+}
+.swiper-button-disabled {
+  opacity: 0;
+  @include transition;
+}

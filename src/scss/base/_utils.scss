@@ -1,0 +1,27 @@
+.none {
+  display: none;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+.open {
+  top: 0 !important;
+}
+
+.hide-text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
+.ask-open {
+  height: auto !important;
+  background: #f4d6d6 !important;
+  @include transition;
+  .ask__item-btn {
+    transform: rotate(180deg);
+  }
+}

@@ -1,0 +1,66 @@
+.header-wrap {
+  display: block;
+  margin-top: 19px;
+  margin-bottom: 30px;
+  @media (max-width: 1200px) {
+    margin: 8px 0;
+  }
+  @media (max-width: 991px) {
+    display: none;
+  }
+}
+.header {
+  @include flex(row, space-between, center);
+
+  &__logo {
+    @include flex(row, flex-start, center);
+    &-text {
+      @include flex(row, flex-start, flex-start);
+      text-align: end;
+      font-size: 12px;
+      letter-spacing: 0.12px;
+      line-height: normal;
+      @media (max-width: 1250px) {
+        display: none;
+      }
+      &--line {
+        display: block;
+        width: 0.5px;
+        height: 41px;
+        margin: 0 16px 0 11px;
+        background-color: $text;
+      }
+    }
+    &-img {
+      @media (max-width: 1200px) {
+        width: 70%;
+        height: auto;
+      }
+    }
+  }
+  &__nav {
+    @include flex(row, flex-start, center);
+    gap: 15px;
+    padding-right: 60px;
+    margin-top: 20px;
+    @media (max-width: 1352px) {
+      padding-right: 0;
+    }
+    @media (max-width: 1200px) {
+      margin: 0;
+    }
+    &-link {
+      @include flex(row, flex-start, center);
+      gap: 10px;
+      @include transition;
+      &:hover {
+        color: $accent;
+      }
+      img {
+        @media (max-width: 1100px) {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,113 @@
+.booth-rent-block {
+  padding-top: 50px;
+  margin-bottom: 50px;
+  background: #fbefef;
+  @media (max-width: 991px) {
+    padding-top: 16px;
+    margin-bottom: 0;
+  }
+}
+.booth-rent__title {
+  display: none;
+  @media (max-width: 991px) {
+    display: block;
+    @include title;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+.booth-rent {
+  @include flex(row, center, flex-start);
+  gap: 20px;
+  @media (max-width: 1400px) {
+    @include flex(column-reverse, center, center);
+  }
+  @media (max-width: 991px) {
+    @include flex(row, center, flex-start);
+  }
+  &__left {
+    @include flex(column, center, center);
+    gap: 35px;
+    @media (max-width: 1400px) {
+      @include flex(row, center, flex-start);
+      gap: 20px;
+    }
+    @media (max-width: 991px) {
+      @include flex(column, center, center);
+      gap: 16px;
+    }
+  }
+  &__right {
+    @include flex(column, center, center);
+    height: 100%;
+  }
+  &__wrap {
+    @include flex(row, flex-start, center);
+    gap: 20px;
+    @media (max-width: 991px) {
+      @include flex(column, flex-start, flex-start);
+      height: 100%;
+      gap: 14px;
+    }
+    &--top {
+      margin-bottom: 27px;
+      @media (max-width: 991px) {
+        margin-bottom: 0;
+      }
+    }
+    &--bottom {
+      @media (max-width: 991px) {
+        display: none;
+      }
+    }
+  }
+  h2 {
+    @include title;
+    width: 857px;
+    margin-bottom: 30px;
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+  ul {
+    @include flex(column, flex-start, flex-start);
+    gap: 35px;
+    @media (max-width: 991px) {
+      gap: 16px;
+    }
+  }
+  ul > li {
+    @include text;
+    width: 420px;
+    @media (max-width: 991px) {
+      width: 100%;
+      max-width: 620px;
+      color: #050505;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 15px;
+      letter-spacing: 0.36px;
+    }
+  }
+  &__img-1,
+  &__img-2,
+  &__img-3,
+  &__img-4,
+  &__img-5 {
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+  &__img-1-mobile,
+  &__img-2-mobile,
+  &__img-3-mobile,
+  &__img-4-mobile {
+    display: none;
+    @media (max-width: 991px) {
+      display: block;
+    }
+  }
+  &__img-4-mobile {
+    margin-top: auto;
+  }
+}

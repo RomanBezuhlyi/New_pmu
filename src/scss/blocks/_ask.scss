@@ -1,0 +1,146 @@
+.ask-wrapper {
+  padding: 66px 0;
+  @media (max-width: 768px) {
+    padding: 22px 0;
+  }
+}
+.ask-wrapper .container {
+  position: relative;
+}
+.ask-bg-one {
+  position: absolute;
+  top: 120px;
+  left: 18%;
+  color: $bgAccent;
+  text-align: center;
+  font-size: 288px;
+  font-weight: 700;
+  line-height: 246.5px;
+  letter-spacing: 11.52px;
+  text-transform: uppercase;
+  transform: rotate(-90deg);
+  z-index: 2;
+  @media (max-width: 1350px) {
+    top: 140px;
+    left: 10%;
+    font-size: 83px;
+    line-height: 83px;
+    letter-spacing: 3.32px;
+  }
+  @media (max-width: 1150px) {
+    top: 350px;
+    left: -15px;
+  }
+}
+.ask-bg-two {
+  position: absolute;
+  top: -40px;
+  color: #fbefef;
+  text-align: center;
+  font-size: 1000px;
+  font-weight: 500;
+  line-height: 742px;
+  letter-spacing: 40px;
+  text-transform: uppercase;
+  @media (max-width: 1150px) {
+    font-size: 400px;
+    line-height: 200px;
+    letter-spacing: 16px;
+    top: 0;
+    left: -15px;
+  }
+}
+.ask {
+  @include flex(column, center, center);
+  gap: 1px;
+  position: relative;
+  z-index: 3;
+  width: 837px;
+  margin-left: auto;
+  @media (max-width: 991px) {
+    width: 637px;
+  }
+  @media (max-width: 768px) {
+    width: 400px;
+  }
+  @media (max-width: 480px) {
+    width: 228px;
+  }
+  &__item {
+    position: relative;
+    background: #fbefef;
+    height: 58px;
+    overflow: hidden;
+    @include transition;
+    @media (max-width: 991px) {
+      height: 45px;
+    }
+    &-btn {
+      @include flex(row, center, center);
+      position: absolute;
+      bottom: 18px;
+      right: 15px;
+      @include transition;
+      @media (max-width: 991px) {
+        transform: rotate(-90deg);
+        bottom: 10px;
+        right: 5px;
+      }
+    }
+    &-top {
+      @include flex(row, flex-start, center);
+      padding: 17px 14px 9px 20px;
+      @media (max-width: 991px) {
+        padding: 12px 20px 12px 10px;
+      }
+
+      h6 {
+        @include text;
+        @media (max-width: 480px) {
+          font-size: 12px;
+          line-height: 12px; /* 100% */
+          letter-spacing: 0.12px;
+        }
+      }
+    }
+    &-body {
+      padding: 0 14px 15px 20px;
+      @media (max-width: 991px) {
+        margin-top: 10px;
+      }
+      &-title {
+        color: #36373b;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: -0.14px;
+        margin-bottom: 20px;
+        @media (max-width: 991px) {
+          font-size: 10px;
+          letter-spacing: -0.1px;
+          margin-bottom: 10px;
+        }
+      }
+      &-text {
+        color: #36373b;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 100%;
+        padding-right: 30px;
+        margin-bottom: 20px;
+        @media (max-width: 991px) {
+          font-size: 10px;
+          margin-bottom: 10px;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 11;
+          -webkit-box-orient: vertical;
+        }
+      }
+      &-icons {
+        @include flex(row, flex-start, center);
+        gap: 18px;
+      }
+    }
+  }
+}
