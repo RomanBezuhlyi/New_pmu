@@ -68,7 +68,6 @@
     border-radius: 10px;
     background: $bg;
     box-shadow: 0px 7px 15px 0px rgba(65, 91, 116, 0.2);
-    cursor: pointer;
     @media (max-width: 1300px) {
       @include flex(column, flex-start, center);
       width: 135px;
@@ -127,13 +126,7 @@
       font-weight: 400;
       line-height: 123.945%;
       letter-spacing: -0.18px;
-      opacity: 0;
-      height: 0;
-      overflow: hidden;
-      @include transition;
-      p {
-        margin-top: 20px;
-      }
+      margin-top: 20px;
       @media (max-width: 1300px) {
         margin-top: 10px;
         font-size: 14px;
@@ -141,10 +134,21 @@
       }
     }
   }
+  &__item-center {
+    width: 230px;
+    height: 290px;
+    padding: 35px 15px 29px 21px;
+    height: auto;
+    background: $bgAccent;
+    @media (max-width: 1300px) {
+      @include flex(column, flex-start, center);
+      width: 135px;
+      height: 265px;
+      padding: 14px 22px 14px 19px;
+    }
+  }
   &__btn {
     @include button;
-    position: absolute;
-    bottom: 40px;
   }
 }
 .secondary {
@@ -156,16 +160,5 @@
   align-items: flex-start;
   @media (max-width: 480px) {
     flex-direction: column;
-  }
-}
-@media (min-width: 991px) {
-  .booth__item:hover {
-    height: auto;
-    background: $bgAccent;
-    padding: 35px 12px 29px 21px;
-  }
-  .booth__item:hover .booth__item-body {
-    opacity: 1;
-    height: auto;
   }
 }
